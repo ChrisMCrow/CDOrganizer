@@ -1,0 +1,23 @@
+@{
+  Layout = "_Layout";
+}
+
+<div class="container">
+  <h1 class="jumbotron">Artists</h1>
+  @foreach (var artist in Model)
+  {
+    <h3>
+      <a href="/artists/@artist.GetId()">@artist.GetId() : @artist.Name</a>
+    </h3>
+  }
+  <div class="">
+    <form action="/Artists/new" method="get">
+      <button class="btn btn-success">Add a CD Artist</button>
+    </form>
+    <br>
+    <form action="/" method="get">
+      <button  class="btn btn-danger">Return to Home</button>
+    </form>
+
+  </div>
+</div>

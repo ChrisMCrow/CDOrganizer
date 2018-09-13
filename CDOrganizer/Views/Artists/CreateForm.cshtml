@@ -1,0 +1,15 @@
+@{
+  Layout = "_Layout";
+}
+
+<div class="container">
+  <h1 class="jumbotron">Add Artist</h1>
+  <form action="/artists/new" method="post">
+    <label for="new-artist">Add an Artist</label>
+    <input type="text" name="new-artist" id="new-artist">
+    <button class="btn btn-primary">Add a CD Artist</button>
+  </form>
+  <form action="/Artists" method="get">
+    <button  class="btn btn-danger">Return to List</button>
+  </form>
+</div>

@@ -1,0 +1,21 @@
+@{
+  Layout = "_Layout";
+}
+
+<div class="container">
+  <h1 class="jumbotron">@Model.Name</h1>
+  @foreach (var album in Model.GetAlbums())
+  {
+    <h3>@Model.GetAlbums().Name</h3>
+  }
+  <div class="">
+    <form action="/Artists/@Model.GetId()/new" method="get">
+      <button class="btn btn-success">Add a CD for this Artist</button>
+    </form>
+    <br>
+    <form action="/" method="get">
+      <button  class="btn btn-danger">Return to Home</button>
+    </form>
+
+  </div>
+</div>

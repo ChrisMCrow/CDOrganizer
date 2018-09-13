@@ -1,0 +1,15 @@
+@{
+  Layout = "_Layout";
+}
+
+<div class="container">
+  <h1 class="jumbotron">@Model.Name | Add</h1>
+  <form action="/artists/@Model.GetId()/new" method="post">
+    <label for="new-album">Add an Album</label>
+    <input type="text" name="new-album" id="new-album">
+    <button class="btn btn-primary">Add Album</button>
+  </form>
+  <form action="/Artists/@Model.GetId()" method="get">
+    <button class="btn btn-danger">Return to List</button>
+  </form>
+</div>
